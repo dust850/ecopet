@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=”iso-8859-1”>
+    <title>registro de ventas</title>
+    <link rel="stylesheet" href="estilo37.css" type="text/css" media="all">
+
+<script language="JavaScript">
+function calcularVenta()
+{
+   var p1, c1, p2, c2, p3, c3, sub1, sub2, sub3, subtot, i, t,  d, p;
+   p1= parseInt(form1.precio1.value);
+   c1= parseInt(form1.cantidad1.value);
+   p2= parseInt(form1.precio2.value);
+   c2= parseInt(form1.cantidad2.value);
+   p3= parseInt(form1.precio3.value);
+   c3= parseInt(form1.cantidad3.value);
+   
+
+   sub1= p1*c1;
+   sub2= p2*c2;
+   sub3= p3*c3;
+   subtot= sub1 + sub2 + sub3;
+   d= subtot *0.05;
+   p=subtot - d
+   
+   t = p ;
+   form1.subtotal1.value= sub1;
+   form1.subtotal2.value= sub2;
+   form1.subtotal3.value= sub3;
+     form1.importe.value= subtot;
+  
+   form1.descuento.value= d;
+   form1.total.value= t; 
+}
+
+</script>
+</head>
+<body>
+ <div id="general"> 
+    <div id="cabecera"><img src="img/imagen 3.jpg" width="300px" height="300px"></div>
+    <div id="navegacion">
+     <ul>
+      <li><a href="index.html">Nosotros</a></li>
+           <li><a href="nosotros.html">Quienes somos?</a></li>
+        <li><a href="visitanos.html">visitanos</a></li>
+       <li><a href="productos.html">Productos</a></li>
+       <li><a href="provedorframe.html">provedores</a></li>
+       <li><a href="registrate.html">registrate</a></li>
+     </ul>
+    </div>
+    <div id="contenido">
+         <div id="menu">
+           <ul>
+             <li><a href="boleta.html">Registro de ventas</a></li>
+             <li><a href="factura.html">Registro de pedidos</a></li>
+             <li><a href="http://www.musica.com">Música</a></li>
+           </ul>  
+         </div>
+
+
+
+
+<div>  <h2>REGISTRO DE VENTAS</h2>
+  <form name="form1" method="post" action="">
+    <table>
+  <tr>
+    <td align=left >PRODUCTO</td>
+          <td align=left>PRECIO</td>
+          <td align=left>CANTIDAD POR TONELADA</td>
+          <td align=left>SUBTOTAL</td>
+  </tr>
+  <tr>
+    <td align=left>chancaca</td>
+          <td><input type="text" size=4 name="precio1" value=500 readonly></td>
+          <td><input type="text" size=4 name="cantidad1" value=0 ></td>
+          <td><input type="text" size=4 name="subtotal1" readonly></td> 
+  </tr>
+    <tr>
+    <td align=left>flake 25mm</td>
+          <td><input type="text" size=4 name="precio2" value=400 readonly></td>
+          <td><input type="text" size=4 name="cantidad2" value=0 ></td>
+          <td><input type="text" size=4 name="subtotal2" readonly></td> 
+  </tr>
+    <tr>
+    <td align=left>flake 10mm</td>
+          <td><input type="text" size=4 name="precio3" value=1.5 readonly></td>
+          <td><input type="text" size=4 name="cantidad3" value=0></td>
+          <td><input type="text" size=4 name="subtotal3" readonly></td> 
+  </tr>
+   <tr>
+    <td align=left colspan=3>IMPORTE </td>
+          <td><input type="text" size=4 name="importe" readonly></td> 
+  </tr>
+
+        
+   <tr>
+    <td align=left colspan=3>DESCUENTO(5%) </td>
+          <td><input type="text" size=4 name="descuento" readonly></td> 
+  </tr>
+ 
+        <tr>
+    <td align=left colspan=3>TOTAL </td>
+          <td><input type="text" size=4 name="total" readonly></td> 
+  </tr>
+    </table>
+<br<<br>
+    <input type="reset" value="Limpiar"> <input name="cmdcalcular" type="button" value="Calcular" onClick="calcularVenta();">
+</form></div>
+  <div id="pie">
+      <div id="pieuno">RUC: 7344893041</div>
+      <div id="piedos">"Copyright © ecopet Todos los Derechos Reservados<br>
+      contactos:964 850 312<br>
+     </div>
+      <div id="pietres"> correo:crisjoy298@gmail.com</div>
+    </div>
+   </div>
+  </body>
+</html> 
